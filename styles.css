@@ -1,0 +1,148 @@
+ .main-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+
+ }
+
+ .container {
+
+     border-radius: 20px;
+     max-width: fit-content;
+     padding: 5px;
+     margin: 1rem;
+     background-color: lightgray;
+ }
+
+ #input-text {
+
+     text-align: right;
+     background-color: unset;
+     border: unset;
+     color: black;
+     border-radius: 10px;
+     font-weight: bolder;
+     font-size: 1.2rem;
+     height: 40px;
+     width: 100%;
+
+ }
+
+ section {
+     margin: 1rem;
+ }
+
+ .topSection {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     color: black;
+     margin-bottom: 0;
+ }
+
+ .topSection div:nth-child(1) {
+     font-weight: bold;
+     font-size: 1.5rem;
+ }
+
+ .topSection div:nth-child(2) {
+     line-height: 2.5;
+ }
+
+ .displayRow {
+     background-color: white;
+     color: black;
+     padding: 10px;
+     margin-top: 0 !important;
+     border-radius: 10px;
+     font-weight: bold;
+     font-size: 2rem;
+     height: 40px;
+
+ }
+
+ .buttonSection {
+     background-color: #b4aaaa;
+     padding: 10px;
+     border-radius: 10px;
+ }
+
+ .buttonRow {
+     display: flex;
+     justify-content: space-between;
+ }
+
+ button {
+     /* padding: 20px; */
+     margin: 5px;
+     border: unset;
+     border-radius: 10px;
+     background-color: white;
+     color: black;
+     box-shadow: 4px 4px 4px 0px rgba(91, 83, 95, 0.5);
+     font-weight: bold;
+     font-size: large;
+     cursor: pointer;
+     width: 60px;
+     height: 60px;
+ }
+
+
+ .minusbtn,
+ .dividebtn,
+ .multiplybtn {
+     width: 50px;
+ }
+
+ .delbtn {
+     padding: 7px;
+     color: white;
+     background-color: rgb(91, 164, 233);
+ }
+
+ .resetbtn {
+     margin-top: 10px;
+     color: white;
+     background-color: rgb(91, 164, 233);
+     width: 128px;
+ }
+
+ .assignmentbtn {
+     margin-top: 10px;
+     background-color: peru;
+     color: white;
+     width: 128px;
+ }
+
+ @media (max-width: 768px) {
+     .container {
+         width: 80% !important;
+     }
+ }
+
+ /* @media(max-width:320px) {
+     .container {
+         width: 60% !important;
+         margin-left: 40px !important;
+     }
+
+     button {
+         padding: 15px;
+         margin: 5px;
+         width: 35px;
+         height: 35px;
+         font-size: medium;
+         text-align: center;
+     }
+
+     .delbtn {
+         padding: 7px;
+     }
+
+     .resetbtn {
+         font-size: small !important;
+         width: 128px;
+     }
+
+ } */
