@@ -19,7 +19,7 @@
 
      text-align: right;
      background-color: unset;
-     border: unset;
+     border: white;
      color: black;
      border-radius: 10px;
      font-weight: bolder;
@@ -27,6 +27,10 @@
      height: 40px;
      width: 100%;
 
+ }
+
+ input:focus {
+     outline: none;
  }
 
  section {
