@@ -1,13 +1,18 @@
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+ }
+
  .main-container {
      display: flex;
      justify-content: center;
      align-items: center;
      height: 100vh;
-
  }
 
  .container {
-
+     justify-self: center;
      border-radius: 20px;
      max-width: fit-content;
      padding: 5px;
@@ -57,8 +62,7 @@
  .displayRow {
      background-color: white;
      color: black;
-     padding: 10px;
-     margin-top: 0 !important;
+     /* padding: 10px; */
      border-radius: 10px;
      font-weight: bold;
      font-size: 2rem;
@@ -125,28 +129,62 @@
      }
  }
 
- /* @media(max-width:320px) {
+ @media (max-width:425px) {
      .container {
-         width: 60% !important;
-         margin-left: 40px !important;
+         width: 80% !important;
+
      }
 
      button {
-         padding: 15px;
+         /* padding: 20px; */
          margin: 5px;
-         width: 35px;
-         height: 35px;
-         font-size: medium;
-         text-align: center;
+         width: 50px;
+         height: 40px;
      }
 
-     .delbtn {
-         padding: 7px;
+     #input-text {
+         font-size: 1rem !important;
+         height: 40px;
+         width: 100%;
+
+
      }
+
+     .displayRow {
+
+
+         font-size: 1rem;
+         height: 40px;
+
+     }
+
+     .minusbtn,
+     .dividebtn,
+     .multiplybtn {
+         width: 40px;
+     }
+
+
 
      .resetbtn {
-         font-size: small !important;
-         width: 128px;
+         margin-top: 10px;
+         color: white;
+         background-color: rgb(91, 164, 233);
+         width: 100px;
      }
 
- } */
+     .assignmentbtn {
+         margin-top: 10px;
+         background-color: peru;
+         color: white;
+         width: 100px;
+     }
+ }
+
+ @media (max-width:300px) {
+     .main-container {
+         display: none;
+
+     }
+
+ }
