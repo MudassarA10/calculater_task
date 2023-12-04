@@ -129,14 +129,14 @@
      }
  }
 
- @media (max-width:425px) {
+ /* @media (max-width:425px) {
      .container {
          width: 80% !important;
 
      }
 
      button {
-         /* padding: 20px; */
+         
          margin: 5px;
          width: 50px;
          height: 40px;
@@ -187,4 +187,4 @@
 
      }
 
- }
+ } */
