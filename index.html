@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cal-style.css">
     <!-- <link rel="stylesheet" href="cal.js"> -->
 </head>
 
@@ -13,9 +13,26 @@
     <div class="main-container">
         <div class="container">
             <section class="topSection">
-                <div>
-                    MyCalc
+                <div> calc</div>
+                <div class="ToggleDiv">
+                    <p>THEME</p>
+                    <!-- Toggle container with three stages -->
+                    <div class="ToggleStages">
+                        <div>
+                            <li>1</li>
+                            <li>2</li>
+                        </div>
+
+                        <div class="switch-toggle switch-3 switch-candy">
+                            <label class="switch">
+                                <input type="checkbox" id="click" onclick="">
+                                <span class="slider round"></span>
+                            </label>
+
+                        </div>
+                    </div>
                 </div>
+
             </section>
             <section>
                 <div class="displayRow">
@@ -24,34 +41,34 @@
             </section>
 
             <section class="buttonSection">
-                <div class="buttonRow">
-                    <button class="btn" onclick="calculate(7)">7</button>
-                    <button class="btn" onclick="calculate(8)">8</button>
-                    <button class="btn" onclick="calculate(9)">9</button>
-                    <button class="btn delbtn" onclick="del()">DEL</button>
+                <div class="divRow">
+                    <div class="btn" onclick="Calculate(7)">7</div>
+                    <div class="btn" onclick="Calculate(8)">8</div>
+                    <div class="btn" onclick="Calculate(9)">9</div>
+                    <div class="btn delbtn" onclick="del()">DEL</div>
                 </div>
-                <div class="buttonRow">
-                    <button class="btn" onclick="calculate(4)">4</button>
-                    <button class="btn" onclick="calculate(5)">5</button>
-                    <button class="btn" onclick="calculate(6)">6</button>
-                    <button class="btn" onclick="calculate('+')">&plus;</button>
+                <div class="divRow">
+                    <div class="btn" onclick="Calculate(4)">4</div>
+                    <div class="btn" onclick="Calculate(5)">5</div>
+                    <div class="btn" onclick="Calculate(6)">6</div>
+                    <div class="btn" onclick="Calculate('+')">&plus;</div>
                 </div>
-                <div class="buttonRow">
-                    <button class="btn" onclick="calculate(1)">1</button>
-                    <button class="btn" onclick="calculate(2)">2</button>
-                    <button class="btn" onclick="calculate(3)">3</button>
-                    <button class="btn" onclick="calculate('-')">-</button>
+                <div class="divRow">
+                    <div class="btn" onclick="Calculate(1)">1</div>
+                    <div class="btn" onclick="Calculate(2)">2</div>
+                    <div class="btn" onclick="Calculate(3)">3</div>
+                    <div class="btn minusbtn" onclick="Calculate('-')">-</div>
                 </div>
-                <div class="buttonRow">
-                    <button class="btn dotbtn" onclick="calculate('.')">.</button>
-                    <button class="btn" onclick="calculate(0)">0</button>
-                    <button class="btn" onclick="calculate('/')">/</button>
-                    <button class="btn" onclick="calculate('*')">*</button>
+                <div class="divRow">
+                    <div class="btn dotbtn" onclick="Calculate('.')">.</div>
+                    <div class="btn" onclick="Calculate(0)">0</div>
+                    <div class="btn dividebtn" onclick="Calculate('/')">/</div>
+                    <div class="btn multiplybtn" onclick="Calculate('*')">*</div>
                 </div>
 
-                <div class="buttonRow">
-                    <button class="btn resetbtn" onclick="cls()">RESET</button>
-                    <button class="btn assignmentbtn" onclick="Result()">&equals;</button>
+                <div class="divRow">
+                    <div class="btn resetbtn" onclick="cls()">RESET</div>
+                    <div class="btn assignmentbtn" onclick="Result()">&equals;</div>
 
                 </div>
 
@@ -60,6 +77,6 @@
         </div>
     </div>
 </body>
-<script src="calculater.js"></script>
+<script src="cal.js"></script>
 
 </html>

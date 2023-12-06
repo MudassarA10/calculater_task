@@ -1,0 +1,252 @@
+ body {
+     max-height: 100vh;
+     font-family: Arial, sans-serif;
+     margin: auto;
+     box-sizing: border-box;
+     display: grid;
+     justify-content: center;
+     align-items: center;
+     background-color: var(--bodyBGClr);
+ }
+
+ :root {
+     --bodyBGClr: #200833;
+     --primary-color-cal: #EDDA59;
+     --btnSectionBGColor: #250b41;
+     --btnBGColor: #331B4D;
+     --btnBorderColor: #56077D;
+     --delbtnBGColor: #31aaa2;
+     --togglebtn: #c45623;
+     --assignbtn: #31aaa2;
+     --delResetbtnBG: #56077D;
+     --delResetBorderClr: #863aaf;
+     --toggleBGClr: #250b41;
+
+ }
+
+ .secondCss {
+     --bodyBGClr: white;
+     --primary-color-cal: black;
+     --btnSectionBGColor: #c2bebe;
+     --btnBGColor: white;
+     --btnBorderColor: #A99D91;
+     --assignbtn: #c45623;
+     --delResetbtnBG: #008187;
+     --delResetBorderClr: #006066;
+     --toggleBGClr: #c2bebe;
+ }
+
+ /*---------------- container css ---------------- */
+ .main-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+ }
+
+ .container {
+     /* max-width: 50vw; */
+     /* height: 100vh; */
+     padding: 5px;
+     justify-self: center;
+ }
+
+ /*---------------- all three section css ---------------- */
+ section {
+     margin: 1rem;
+ }
+
+ /*---------------- top section css ---------------- */
+ .topSection {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     color: var(--primary-color-cal);
+     margin-bottom: 1rem;
+ }
+
+ .topSection div:nth-child(1) {
+     font-weight: bolder;
+     font-size: 1.5rem;
+ }
+
+
+ .ToggleDiv {
+     display: flex;
+     align-items: flex-end;
+     font-size: 10px;
+     line-height: 1;
+ }
+
+ .ToggleDiv p {
+     margin-bottom: 3px;
+ }
+
+ .ToggleStages {
+     display: flex;
+     flex-direction: column;
+     margin-left: 15px;
+     /* Align items at the bottom */
+ }
+
+ .ToggleStages li {
+     list-style: none;
+     float: left;
+     margin: 6px 10px;
+     font-size: 10px;
+ }
+
+
+
+
+ .switch {
+     position: relative;
+     display: inline-block;
+     width: 50px;
+     height: 18px;
+ }
+
+ .switch input {
+     opacity: 0;
+     width: 0;
+     height: 0;
+ }
+
+ .slider {
+     position: absolute;
+     cursor: pointer;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: var(--toggleBGClr);
+     -webkit-transition: .4s;
+     transition: .4s;
+ }
+
+ .slider:before {
+     position: absolute;
+     content: "";
+     height: 14px;
+     width: 14px;
+     top: 1.5px;
+     left: 4px;
+     bottom: 4px;
+     background: var(--togglebtn);
+     -webkit-transition: .4s;
+     transition: .4s;
+ }
+
+ input:checked+.slider {
+     background-color: var(--toggleBGClr);
+ }
+
+
+
+ input:checked+.slider:before {
+     -webkit-transform: translateX(26px);
+     -ms-transform: translateX(26px);
+     transform: translateX(26px);
+ }
+
+
+ .slider.round {
+     border-radius: 34px;
+ }
+
+ .slider.round:before {
+     border-radius: 50%;
+ }
+
+
+
+ /*---------------- display section css ---------------- */
+
+ .displayRow {
+     background-color: var(--btnSectionBGColor);
+     height: 60px;
+     padding: 10px 20px;
+     margin-top: 0 !important;
+     border-radius: 5px;
+
+ }
+
+ .displayRow input {
+     text-align: right;
+     background-color: unset;
+     border: unset;
+
+     color: var(--primary-color-cal);
+     font-weight: bolder;
+     font-size: 1.8rem;
+     height: 60px;
+     width: 100%;
+ }
+
+ .displayRow input:focus {
+     outline: none;
+ }
+
+ /*---------------- btn section css ---------------- */
+
+ .buttonSection {
+     background-color: var(--btnSectionBGColor);
+     padding: 10px;
+     border-radius: 5px;
+ }
+
+ .divRow {
+     display: flex;
+     flex-wrap: wrap;
+ }
+
+ .btn {
+     flex: 1;
+     margin: 8px;
+     padding: 10px;
+     text-align: center;
+     color: var(--primary-color-cal);
+     background-color: var(--btnBGColor);
+     font-size: 1.5rem;
+     font-weight: 900;
+     cursor: pointer;
+     border-radius: 5px;
+     border-bottom: 3px solid var(--btnBorderColor);
+ }
+
+
+ /*----------------  css on operatr btns for adjust width ---------------- */
+
+
+
+ .delbtn,
+ .resetbtn {
+
+     color: white;
+     background-color: var(--delResetbtnBG);
+     border-color: var(--delResetBorderClr);
+
+ }
+
+ .assignmentbtn {
+     color: white;
+     background-color: var(--assignbtn);
+     border-color: var(--assignbtn);
+ }
+
+
+ /*---------------- media qurey css ---------------- */
+ @media (max-width: 400px) {
+     .delbtn {
+         padding-left: 9.5px !important;
+         padding-right: 9.5px;
+
+     }
+ }
+
+ @media (max-width: 340px) {
+     .delbtn {
+         font-size: calc(3vw + 5px);
+
+     }
+ }
