@@ -1,3 +1,8 @@
+ /* body, html {
+    height: 100%;
+    margin: 0;
+} */
+
  body {
      max-height: 100vh;
      font-family: Arial, sans-serif;
@@ -11,7 +16,9 @@
 
  :root {
      --bodyBGClr: #200833;
+     --topSectionClr: #EDDA59;
      --primary-color-cal: #EDDA59;
+     --screenNoClr: #EDDA59;
      --btnSectionBGColor: #250b41;
      --btnBGColor: #331B4D;
      --btnBorderColor: #56077D;
@@ -20,20 +27,39 @@
      --assignbtn: #31aaa2;
      --delResetbtnBG: #56077D;
      --delResetBorderClr: #863aaf;
-     --toggleBGClr: #250b41;
+     --toggleBGClr: #c2bebe;
 
  }
 
+
  .secondCss {
      --bodyBGClr: white;
-     --primary-color-cal: black;
+     --topSectionClr: #2c2c2c;
+     --primary-color-cal: #2c2c2c;
+     --screenNoClr: #2c2c2c;
      --btnSectionBGColor: #c2bebe;
      --btnBGColor: white;
      --btnBorderColor: #A99D91;
      --assignbtn: #c45623;
      --delResetbtnBG: #008187;
      --delResetBorderClr: #006066;
-     --toggleBGClr: #c2bebe;
+     --toggleBGClr: #354764;
+ }
+
+ .thirdCss {
+     --bodyBGClr: #354764;
+     --primary-color-cal: #000000;
+     --topSectionClr: white;
+     --screenNoClr: white;
+     --btnSectionBGColor: #1A2230;
+     --btnBGColor: white;
+     --btnBorderColor: #A99D91;
+     --delbtnBGColor: #31aaa2;
+     --togglebtn: #c45623;
+     --assignbtn: #E62F17;
+     --delResetbtnBG: #5E7197;
+     --delResetBorderClr: #3A4F72;
+     --toggleBGClr: #200833;
  }
 
  /*---------------- container css ---------------- */
@@ -61,12 +87,18 @@
      display: flex;
      flex-direction: row;
      justify-content: space-between;
-     color: var(--primary-color-cal);
-     margin-bottom: 1rem;
+     /* color: #EDDA59; */
+     color: var(--topSectionClr);
+     /* color: var(--topSectionClr); */
+     margin-bottom: 2rem;
+ }
+
+ .calcName p {
+     margin-bottom: 2px;
  }
 
  .topSection div:nth-child(1) {
-     font-weight: bolder;
+     font-weight: 800;
      font-size: 1.5rem;
  }
 
@@ -76,86 +108,56 @@
      align-items: flex-end;
      font-size: 10px;
      line-height: 1;
+
  }
 
  .ToggleDiv p {
      margin-bottom: 3px;
+     font-weight: 800;
+     padding-bottom: 5px;
  }
 
  .ToggleStages {
      display: flex;
      flex-direction: column;
-     margin-left: 15px;
+     margin-left: 25px;
      /* Align items at the bottom */
  }
 
  .ToggleStages li {
      list-style: none;
      float: left;
-     margin: 6px 10px;
+     margin: 11px 13px;
      font-size: 10px;
  }
 
+ .ToggleStages li:nth-child(1) {
+     margin-left: 3px;
+ }
 
-
+ .ToggleStages li:nth-child(3) {
+     margin-right: 0px;
+ }
 
  .switch {
+     width: 80px;
+     height: 20px;
+     background-color: var(--toggleBGClr);
+     border-radius: 15px;
      position: relative;
-     display: inline-block;
-     width: 50px;
-     height: 18px;
+
  }
 
- .switch input {
-     opacity: 0;
-     width: 0;
-     height: 0;
- }
-
- .slider {
-     position: absolute;
-     cursor: pointer;
-     top: 0;
-     left: 0;
-     right: 0;
-     bottom: 0;
-     background-color: var(--toggleBGClr);
-     -webkit-transition: .4s;
-     transition: .4s;
- }
-
- .slider:before {
-     position: absolute;
-     content: "";
-     height: 14px;
-     width: 14px;
-     top: 1.5px;
-     left: 4px;
-     bottom: 4px;
+ .toggle {
+     width: 12px;
+     height: 12px;
      background: var(--togglebtn);
-     -webkit-transition: .4s;
-     transition: .4s;
- }
-
- input:checked+.slider {
-     background-color: var(--toggleBGClr);
- }
-
-
-
- input:checked+.slider:before {
-     -webkit-transform: translateX(26px);
-     -ms-transform: translateX(26px);
-     transform: translateX(26px);
- }
-
-
- .slider.round {
-     border-radius: 34px;
- }
-
- .slider.round:before {
      border-radius: 50%;
+     cursor: pointer;
+     position: absolute;
+     top: 4px;
+     left: 3px;
+     transition: transform 0.3s ease;
  }
 
 
@@ -175,8 +177,7 @@
      text-align: right;
      background-color: unset;
      border: unset;
-
-     color: var(--primary-color-cal);
+     color: var(--screenNoClr);
      font-weight: bolder;
      font-size: 1.8rem;
      height: 60px;
@@ -217,11 +218,13 @@
 
  /*----------------  css on operatr btns for adjust width ---------------- */
 
-
+ /* .dotbtn, .minusbtn, .dividebtn,  .multiplybtn{
+    width: 50px;
+} */
 
  .delbtn,
  .resetbtn {
-
+     /* padding: 7px; */
      color: white;
      background-color: var(--delResetbtnBG);
      border-color: var(--delResetBorderClr);
@@ -234,19 +237,20 @@
      border-color: var(--assignbtn);
  }
 
-
  /*---------------- media qurey css ---------------- */
  @media (max-width: 400px) {
      .delbtn {
          padding-left: 9.5px !important;
          padding-right: 9.5px;
-
      }
+
+
+
  }
 
  @media (max-width: 340px) {
      .delbtn {
-         font-size: calc(3vw + 5px);
+         font-size: calc(3vw + 4px);
 
      }
  }
